@@ -4,3 +4,9 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+      #si ponemos * habilitamos todos los endpoints si quermemos solo unos cuantos se enumera separados por comas: env, beans...etc
+        include: "*"
