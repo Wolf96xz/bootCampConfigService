@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: nttSpringRest
+  cloud:
+    config:
+      uri: http://localhost:8081
+      username: toni
+      password: 1234
+  boot:
+    admin:
+      client:
+        url: http://localhost:8086
