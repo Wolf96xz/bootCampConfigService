@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: eureka
+  cloud:
+    config:
+      uri: http://localhost:8081
+      #esto no hace falta porque tengo yo impementado security
+      username: toni
+      password: 1234
