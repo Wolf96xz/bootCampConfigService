@@ -1,0 +1,20 @@
+server:
+  port: 8070
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        # nombre de nuestro route
+        - id: springRESTclemen
+          # uri lo redirijimos a nuestros service costumer service (nombre que esta registrado eureka server)
+          uri: lb://springRESTclemen
+          #filtro que va a aplicar al path de la llamada de nuestros microservicios (todo lo que lleva costumers)
+          predicates:
+            - Path=/api/**
